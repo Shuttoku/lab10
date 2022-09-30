@@ -13,13 +13,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.pink
         
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'โปรแกรมนับเลขของฉัน', style: TextStyle(color: Color.fromARGB(255, 87, 89, 214), fontSize: 24),)
+      ,
+      
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title, required TextStyle style}) : super(key: key);
 
   
 
@@ -55,15 +57,21 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text(
               'โปรแกรมนับเลข',
+              style: TextStyle(color: Color.fromARGB(255, 105, 10, 53), fontSize: 24),
+              
             ),
+            
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
               
+              
             ),
+            
           ],
         ),
       ),
+      backgroundColor: Color.fromARGB(255, 236, 155, 180),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
